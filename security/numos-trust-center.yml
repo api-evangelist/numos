@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+source: https://trust.numos.ai/
+probe: false
+url: https://trust.numos.ai/
+platform: Vanta
+# The Numos trust center is a real, live page ("Numos AI Trust Center") hosted on
+# the Vanta trust-center platform (vanta.com referenced in the page markup). The
+# page is a client-rendered SPA, so specific named certifications (e.g. SOC 2)
+# could not be extracted verbatim from the static HTML and are therefore left
+# unlisted rather than assumed. Re-run with a JS-capable fetch to enumerate the
+# published reports/certifications and, if named certs are confirmed, add a
+# `type: Compliance` pointer.
+certifications: []
+evidence:
+- source: https://trust.numos.ai/
+  keywords:
+  - numos ai trust center
+  - vanta

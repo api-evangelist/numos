@@ -1,7 +1,29 @@
 aid: numos
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/numos.png
 name: Numos
-description: Numos is a company surfaced as a portfolio company of general-catalyst and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Numos is an AI agent platform that automates accounting and financial planning
+  & analysis (FP&A) workflows for finance teams. It layers above existing ERPs
+  with "zero disruption to your current architecture" and learns a company's
+  accounting policies and entity structures to run strategic FP&A and variance
+  analysis, continuous month-end close, accounts payable orchestration, and
+  accounts receivable / revenue recognition. Numos is headquartered in San Mateo,
+  California and is backed by General Catalyst. Its product is delivered as a
+  hosted web application (app.numosai.com); the company exposes no public
+  developer API, documentation, or developer portal at this time. This profile
+  was surfaced from the General Catalyst portfolio and enriched from Numos's
+  public web surface.
 url: https://raw.githubusercontent.com/api-evangelist/numos/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +33,38 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Artificial Intelligence
+- AI Agents
+- Accounting
+- Finance
+- FP&A
+- Fintech
+- Automation
+- ERP
 apis: []
+common:
+- type: DomainSecurity
+  url: security/numos-domain-security.yml
+- type: Website
+  url: https://numos.ai/
+- type: Login
+  url: https://app.numosai.com/
+- type: PrivacyPolicy
+  url: https://numos.ai/privacy-policy
+- type: TrustCenter
+  url: https://trust.numos.ai/
+- type: TrustCenter
+  url: security/numos-trust-center.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1

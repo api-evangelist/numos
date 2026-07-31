@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of Numos public hosts
+# No genuine /.well-known discovery documents were found. numos.ai (marketing) and
+# app.numosai.com (the product app) are Next.js SPAs whose catch-all returns HTTP
+# 200 with text/html for ANY path, including nonexistent ones — so a "200" on a
+# well-known path is a SPA shell, NOT a real document. Verified with a random
+# control path (/.well-known/this-is-not-real-xyz -> 200 text/html). No public
+# developer API host publishes a well-known catalog. Recorded as absent; no
+# WellKnown pointer wired.
+hosts:
+- host: https://www.numos.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    real: false
+  - path: /.well-known/openid-configuration
+    status: 404
+    real: false
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    real: false
+  - path: /.well-known/api-catalog
+    status: 404
+    real: false
+- host: https://app.numosai.com
+  note: SPA catch-all returns 200 text/html for all paths; none are real documents
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    real: false
+    reason: SPA HTML shell, not JSON
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    real: false
+    reason: SPA HTML shell, not JSON
+  - path: /.well-known/security.txt
+    status: 200
+    real: false
+    reason: SPA HTML shell, content-type text/html
